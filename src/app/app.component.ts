@@ -5,12 +5,13 @@ import { Task } from './models/task.model';
 import * as TaskActions from './state/task.actions';
 import { AppState } from './state/app.state';  // Import the AppState interface
 import { CommonModule } from '@angular/common';
+import { HttpClientJsonpModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports:[CommonModule]
+  imports:[CommonModule, HttpClientJsonpModule]
 })
 export class AppComponent implements OnInit {
   title = 'Task Management System';
